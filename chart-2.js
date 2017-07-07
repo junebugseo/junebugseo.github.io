@@ -129,6 +129,23 @@
             element.style("opacity", "0.2")
         })
 
+        .on('touchstart', function(d, i) {
+            tip.show(d)
+            var element = d3.select(this);
+            element.style("stroke-width", "3")
+            element.style("stroke", "black");
+            element.style("opacity", "0.7")
+        })
+
+        .on('touchend', function(d, i) {
+            tip.hide(d)
+            var element = d3.select(this);
+            element.style("stroke-width", "0")
+            element.style("stroke", "white")
+            element.style("opacity", "0.2")
+        })
+
+
         d3.select("#named-select").on('change', function() {
             console.log(this.value);
             value = this.value
