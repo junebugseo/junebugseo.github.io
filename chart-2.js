@@ -94,7 +94,7 @@
             .attr("class", function(d) {
                 var group = d.Group
                 //var companyName = d.Company.replace(" ", "-")
-                var productType = d.Product.replace(" ", "-")
+                var productType = d.Product.replace(/ /g, "-")
                 return "circle " + productType + " " + group;
             })
             .attr("cx", function(d) {
