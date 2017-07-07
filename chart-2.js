@@ -113,7 +113,7 @@
                 return colorScale(d.Product)
             })
 
-        .on('touchstart', function(d, i) {
+        .on('mouseover', function(d, i) {
             tip.show(d)
             var element = d3.select(this);
             element.style("stroke-width", "3")
@@ -121,7 +121,7 @@
             element.style("opacity", "0.7")
         })
 
-        .on('touchend', function(d, i) {
+        .on('mouseout', function(d, i) {
             tip.hide(d)
             var element = d3.select(this);
             element.style("stroke-width", "0")
